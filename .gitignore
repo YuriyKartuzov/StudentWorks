@@ -1,0 +1,17 @@
+# Packages
+node_modules
+
+#logs
+logs
+*.log
+logger
+
+# Optional npm cache directory
+.npm
+
+# This folder contains development test data
+Student Works
+
+#Who knows what this is
+.DS_Store
+public/.DS_Store
