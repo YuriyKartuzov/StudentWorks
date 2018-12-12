@@ -1,0 +1,216 @@
+
+   
+.swLogo {
+  max-height: 90px;
+  max-width: 290px;
+  margin: 10px 11px 5px 8px;
+}
+.swMoto {
+  font-weight: 200;
+  margin-right: 30px;
+  color: #333;
+  vertical-align: middle;
+  padding-top: 20px;
+  font-size: 20px;
+  padding-right: 8px;
+}
+   
+   #img-preview {
+    border: 2px solid #000;
+    border-radius: 6px;
+    width: 200px;
+    cursor: pointer;
+  }
+   
+  #img-preview p {
+    text-align: center;
+  }
+   
+  #img-preview img {
+    width: 100%;
+  }
+
+
+.left-container .row {
+    margin-right: 50px;
+}
+
+
+.flex-sb {
+	display: flex;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.flex-sb-m {
+	display: flex;
+	justify-content: space-between;
+  align-items: center;
+  padding-bottom: 48px;
+  width: 100%;
+}
+
+
+/****************** TAGS ******************/
+  
+a:hover { text-decoration: underline; }
+
+input {
+  outline: none;
+  border: none;
+  width: 200px; 
+  padding: 5px;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+  background-color: #881c1c;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #5f2020;
+}
+
+
+.app {
+width: 100%;
+margin: 0 auto;
+}
+
+
+.left-container {
+width: 700px;
+padding-left: 0px;
+padding-top: 20px;
+}
+
+.right-container {
+padding-top: 20px;
+  padding-left: 50px;
+}
+
+/*---------------------------------------------*/
+.input {
+color: #2e2e2e;
+font-family: 'Roboto', serif;
+line-height: 1.2;
+font-size: 13px;
+
+display: block;
+width: 100%;
+background: transparent;
+height: 50px;
+padding: 0 25px 0 25px;
+}
+/*------------------------------------------------------------------
+[ Focus Input ]*/
+
+.focus-input {
+position: absolute;
+display: block;
+width: calc(100% + 2px);
+height: calc(100% + 2px);
+top: -1px;
+left: -1px;
+pointer-events: none;
+border: 3px solid #3f1616;
+border-radius: 3px;
+
+visibility: hidden;
+opacity: 0;
+}
+
+.input:focus + .focus-input {
+visibility: visible;
+opacity: 1;
+
+-webkit-transform: scale(1);
+-moz-transform: scale(1);
+-ms-transform: scale(1);
+-o-transform: scale(1);
+transform: scale(1);
+}
+
+.eff-focus-selection {
+visibility: visible;
+opacity: 1;
+
+-webkit-transform: scale(1);
+-moz-transform: scale(1);
+-ms-transform: scale(1);
+-o-transform: scale(1);
+transform: scale(1);
+}
+
+/*------------------------------------------------------------------
+[ Button ]*/
+.container-profile-form-btn {
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+align-content: center;
+align-items: center; 
+margin-bottom: 8px;
+padding-top: 20px;
+padding-left: 250px;
+}
+
+.input-wrapper {
+width: 100%;
+position: relative;
+background-color: #ffffff;
+border: 2px solid #222020;
+border-radius: 5px;
+margin-bottom: 12px;
+}
+
+
+.profile-form-btn {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15px;
+  padding-right:15px;
+
+  min-width: 100px;
+  height: 45px;
+  background-color: #881c1c;
+  border-radius: 10px;
+  text-shadow: 1px 1px #1e1e1f;
+}
+
+.avatar {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  
+}
+
+.avatar img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+
+.thumbnail img.portrait {
+  width: 100%;
+  height: auto;
+}

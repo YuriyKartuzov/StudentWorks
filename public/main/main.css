@@ -1,0 +1,40 @@
+/* TILES - the body that displays six projects -------------------------------------- */
+.swTile {
+    width:360px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+.swEmptyTile {
+    opacity: 0.3;
+}
+.swPrjImage {
+    height: 170px; 
+    margin: auto;
+}
+
+
+/* PROJECT Navigation Buttons ---------------------- */
+#tileNav {
+    margin: auto;
+    width: 25%;
+    padding: 10px;
+}
+#nextBtn {
+    float: right;
+    width:60px;
+    height:30px;
+}
+#prevBtn {
+    width:60px;
+    height:30px;
+}
+#pageId {
+    color: #072d50;
+    padding-left: 60px;
+    font-size: 18px;
+    font-weight: 800;
+    padding-top:10px;
+}
+
+#pageTitleID{
+    display: none;
+}

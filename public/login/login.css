@@ -1,0 +1,274 @@
+.flex-sb {
+	display: flex;
+  	justify-content: space-between;
+ 	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+  	flex-wrap: wrap;
+}
+
+.flex-sb-m {
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+  	align-items: center;
+  	padding-bottom: 48px;
+  	width: 100%;
+}
+
+  
+  * {
+      margin: 0px; 
+      padding: 0px; 
+      box-sizing: border-box;
+
+  }
+
+  a {
+    text-decoration: none;
+
+  }
+  
+ 
+  
+  a:hover {
+      text-decoration: underline;
+  }
+  
+  
+  input {
+      outline: none;
+      border: none;
+  }
+  
+  
+  
+  button {
+      outline: none !important;
+      border: none;
+      background: transparent;
+      background-color: #881c1c;
+  }
+  
+  button:hover {
+      cursor: pointer;
+      background-color: #5f2020;;
+    }
+  
+
+  .txt1 {
+    text-shadow: 1px 1px #1e1e1f;
+    font-family: 'Roboto', serif;
+    letter-spacing: 1.6px;
+    font-size: 13px;
+    color: #c9c9c9;
+    line-height: 1.4;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    text-align: left;
+  }
+
+  .txt {
+    text-shadow: 1px 1px #1e1e1f;
+    font-family: 'Roboto', serif;
+    letter-spacing: 1.6px;
+    font-size: 13px;
+    color: #c9c9c9;
+    line-height: 1.4;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-align: left;
+    padding-right: 80px;
+
+  }
+  
+  .txt2 {
+    font-family: 'Roboto', serif;
+    font-size: 15px;
+    color: #c5c5c5;
+    display:inline-block;  
+    text-shadow: 1px 1px #1e1e1f;
+
+  }
+  
+  .txt3 {
+    font-family: 'Catamaran', serif;
+    font-size: 13px;
+    color: #9c0606;
+    
+  }
+
+  
+  .app {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 100px;
+    position: absolute;
+
+  margin-top: 50px;
+}
+
+.container {
+  width: 100px;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin-top: 50px;
+}
+
+
+  
+  .content-wrapper {
+    background:#dbdbdb;
+    border-radius:2px;
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,.2);
+    box-sizing:border-box;
+    color:#72767d;
+    font-size:18px;
+    padding: 40px;
+    width:450px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    background: linear-gradient(to bottom, #dbdbdb 89%, #f3f3f3 14%);
+  }
+ 
+  .login-form {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .title {
+    font-size: 28px;
+    color: #302f2f;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 100%;
+    display: block;
+    padding-bottom: 20px;
+
+  }
+
+  .sub {
+    font-family: 'Roboto Slab', serif;
+    font-size: 13px;
+    color: #a1a1a1;
+    text-align: center;
+  }
+  
+  
+  .input-wrapper {
+    width: 100%;
+    position: relative;
+    background-color: #ebe9e9;
+    border: 2px solid #c9c9c9;
+    border-radius: 3px;
+    margin-bottom: 12px;
+  }
+  
+  
+  .input {
+    font-family: 'Roboto', serif;
+    color: #353535;
+    line-height: 1.2;
+    font-size: 15px;
+  
+    display: block;
+    background: transparent;
+    height: 40px;
+    padding: 0 25px 0 25px;
+    width: 370px;
+
+  }
+  
+  .focus-input {
+    position: absolute;
+    display: block;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    top: -1px;
+    left: -1px;
+    pointer-events: none;
+    border: 2px solid #adadad;
+    border-radius: 3px;
+  
+    visibility: hidden;
+    opacity: 0;
+
+  }
+  
+  .input:focus + .focus-input {
+    visibility: visible;
+    opacity: 1;
+
+  }
+  
+  .eff-focus-selection {
+    visibility: visible;
+    opacity: 1;
+
+  }
+
+  .container-login-form-btn {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 13px;
+    width: 100%;
+    padding-top: 13px;
+    padding-bottom: 25px;
+  }
+  
+  .login-form-btn {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.2;
+
+    height: 40px;
+    padding: 0 25px 0 25px;
+    width: 370px;
+    
+    min-width: 150px;
+    height: 50px;
+    padding: 0 25px 0 25px;
+    width: 370px;    background-color: #9c0606;
+    border-radius: 5px;
+    text-shadow: 1px 1px #1e1e1f;
+  }
+
+
+
+[logo] {
+  max-height: 90px;
+  max-width: 290px;
+  align-items: center;
+  align-content: center;
+  margin-left: 50px;
+  display: block;
+  margin-right: auto;
+}
+
+
+.accTxt {
+  font-family: 'Catamaran', serif;
+  font-size: 13px;
+  color: #b10707;
+}
+
+
+  .error {
+    background-color:#881c1c;
+    border: 1px solid;
+    padding: 8px;
+    padding-bottom: 5px;
+
+}

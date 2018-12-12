@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>StudentWorks-Register</title>
+	<meta charset="UTF-8">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!-- Jquery to send an email -->
+	<script>
+		$(document).ready(function () {
+			var from, to, subject, text;
+			//$("#send_email").click(function(){   
+			$('form[name=register]').submit(function () {
+				if ($('#to').is(':valid')) { //make sure the email is valid before displaying message
+					to = $("#to").val();
+					$("#message").text("Sending E-mail...Please wait");
+					$.get("http://localhost:3000/send", { to: to }, function (data) {
+						if (data == "sent") {
+							$("#message").empty().html("<p>Email is been sent at " + to + " . Please check inbox !</p>");
+						}
+					});
+				}
+			});
+		});
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Roboto|Roboto+Slab|Catamaran" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/registration/register.css">
+	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="app">
+				<div class="content-wrapper">
+					<form onsubmit="return validateForm()" class="register-form validate-form flex-sb" name="register" method="POST" id="register"
+					 action="/send">
+						<a href="/">
+							<img logo alt="logo" src="../images/logo_graybg.png">
+						</a>
+						<span style="border-bottom: 2px solid #c9c9c9; padding-top: 10px; padding-bottom: 20px;" class="title">Register</span>
+						{{#if serverMsg}}
+						<div>
+							<span class="txt error" id="serverMsg" style="color:#dfdfdf; font-weight: bold;">{{serverMsg}}</span>
+						</div>
+						{{/if}}
+
+						<div class="input-wrapper" style="margin-top: 18px;">
+							<input class="input" type="text" name="name" id="NAME" onchange="validUser()" autofocus="autofocus" placeholder="Username"
+							 class="input">
+							</span>
+							<span class="focus-input"></span>
+						</div>
+
+						<div class="input-wrapper">
+							<span id="errorMsg2" style="color:#D22822"></span>
+							<input class="input" type="password" name="password1" id="password1" onchange="validPass()" placeholder="Password">
+							<span class="focus-input"></span>
+						</div>
+
+
+						<div class="input-wrapper">
+							<span id="errorMsg2" style="color:#D22822"></span>
+							<input class="input" type="text" name="email" id="to" onchange="validEmail()" placeholder="Email">
+							<span class="focus-input"></span>
+						</div>
+
+
+						<div class="container-register-form-btn">
+							<button onsubmit="validateForm()" type="submit" class="register-form-btn" id="send_email">SUBMIT</button>
+							<br>
+							<span id="message"></span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="/registration/js/register.js"></script>
+	<div id="dropDownSelect1"></div>
+
+</body>
+
+</html>

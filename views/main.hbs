@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>StudentWorks</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123404482-1"></script>
+    <script>
+        //if (document.location.hostname.search("myproductiondomainname.com") !== -1) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-123404482-1');
+        //}
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/main/main.js"></script>
+    <script src="/header/usermenu.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/header/nav.css">
+    <link rel="stylesheet" href="/main/main.css">
+</head>
+
+<body>
+    {{#if authenticate}}
+    <div hidden id="auth">{{authenticate}}</div>
+    <div hidden id="userID">{{userID}}</div>
+    <div hidden id="userType">{{userType}}</div>
+    {{else}}
+    <div hidden id="userType">Visitor</div>
+    {{/if}}
+    <div class="container">
+        <div class="row hidden-xs">
+            <div class="col-xs-7 col-sm-7">
+                <a href="">
+                    <img class="swLogo" alt="logo" src="images/logo.png">
+                </a>
+            </div>
+            <div class="text-right">
+                <p class="swMoto">"By the students, for the students"</p>
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="container">
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav js-nav-add-active-class">
+                            <li class="">
+                                <a href="#" onclick="displayALLProjets()">
+                                    <space class="glyphicon glyphicon-home"></space>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- for main page -->
+                        <ul class="nav navbar-nav js-nav-add-active-class" id="optHeader"></ul>
+                        <!-- for all page to push data into-->
+                        <div id="pageTitleID"></div>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-align-justify profilefIcon" data-toggle="modal" data-target="#myModal"></span>
+                        </a>
+
+                        <!-- USER MENU .....................................................................................-->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document" id="userMenuModal">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel" style="text-align:center;">User menu</h4>
+                                    </div>
+                                    <!-- populated by usermenu.js -->
+                                    <div class="modal-body" id="userMenu"></div>
+                                    <div class="modal-footer"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END of USER MENU.............................................................................-->
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- BODY...................................................................... -->
+    <div class="container">
+        <div class="row" id="mainBody"></div>
+    </div>
+    <div class="container">
+        <div class="row center" id="tileNav"></div>
+    </div>
+    <!-- End of BODY.............................................................. -->
+    <hr class="clearfix w-100 d-md-none pb-3">
+
+</body>
+
+</html>

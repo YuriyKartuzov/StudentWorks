@@ -1,0 +1,163 @@
+div.divInl {
+    float: left;
+    height:650px;
+    margin-bottom: -45px;
+}
+
+/* MENU */
+#div1 {
+    width:20%;
+    overflow:auto;
+    margin-left:auto; 
+    margin-right:0;
+}
+
+.btn-group {
+    margin-top:98px;
+}
+#aprPrj, #penPrj, #allUsr, #logs, #term{
+    margin-top:5px;
+    font-size: 22px;
+    height:60px;
+    font-weight: 900;
+    width:100%;
+    text-align: right;
+}
+
+#TT, #penPrjTitle, #usrTitle, #logTitle {  /* Table Title */
+    margin-top: 40px;
+    font-weight: 200;
+    font-size: 22px;
+}
+
+#div2 {
+    width:60%;
+    background-color: rgb(250, 250, 250);
+    overflow:auto;
+    padding-left: 40px;
+    padding-right: 30px;
+    border-left: solid 1.5px #6a6a6a;
+    border-right: 0.1px;
+    border-right-style: dashed;
+    margin-top: -25px;
+}
+
+table {
+    margin-top: 25px;
+}
+
+#im{
+    width:18px;
+    opacity: 0.65;
+}
+
+#im2{
+    width:20px;
+    padding-bottom: 2px;
+}
+
+#pageTitleID {
+    color: rgb(242, 232, 232);
+    font-weight: 500;
+    text-shadow: 2px 2px 6px #ae4f4f;
+    letter-spacing: 1px;
+}
+
+#emptyTable {
+    text-align: center;
+    font-weight: 200;
+    font-size: 16px;
+    vertical-align: bottom;
+}
+
+.setAdmin, .deleteUser {
+    width:20px;
+    height: inherit;
+}
+
+form {
+    margin-top:35px;
+    width:300px;
+    border-bottom: 1px double;
+    border-color: #aeabab;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px;
+}
+
+input {
+    border: none;
+    background-color: #6a6a6a;
+    background-color: rgb(250, 250, 250);
+}
+
+#termText {
+    font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
+    font-size: 13px;
+    letter-spacing: -0.05em;
+}
+
+/* DIV 3 -------------------- */
+#div3 {
+    width:20%;
+    margin-top: -25px;
+    padding-top:20px;
+}
+
+#titleDiv3 {
+    width:100%;
+    text-align: center;
+    margin-top: 40px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+
+#storage {
+    font-size:36px;
+    float: right;
+}
+
+.panel-primary {
+    width:90%;
+    margin-left: 15px;
+    margin-right:10px;
+    padding: 0px 10px 0px 10px;
+    margin-top:30px;
+    border: solid 1px #c6c6c6;
+    box-shadow: 0 2px 6px 0 #6a6a6a; 
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.glyphicon-folder-open {
+    text-align: right;
+}
+
+#strPane {
+    font-size: 22px;
+}
+
+#gitIm {
+    width:75px;
+    margin-top:10px;
+    margin-left: -15px;
+}
+
+#gitBody {
+    font-size:14px;
+}
+
+#DBpanel{
+    height:70px;
+    border-radius: 4px;
+}
+
+#DBim{
+    height: 45px;
+    margin-top: -3px;
+    margin-right: 10px;
+}

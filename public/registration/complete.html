@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>StudentWorks-Reset Password</title>
+	<meta charset="UTF-8">   
+	<script src="complete.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Roboto|Roboto+Slab|Catamaran" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="register.css">
+</head>
+<body>
+	
+	<div class="container">
+		<div class="row">
+			<div class="app">
+			<div class="content-wrapper">
+				<form class="register-form validate-form flex-sb" onsubmit="return validateForm()" name="complete" method="POST" action="/complete">
+					<a href="/">
+						<img logo alt="logo" src="../images/logo_graybg.png">
+					</a>
+					<span style="border-bottom: 2px solid #c9c9c9; padding-top: 10px; padding-bottom: 20px;" class="title">Change Password</span>
+					<span id="errorMsg1" style="color:#D22822; font-size: 16px;"></span>
+					<span id="errorMsg2" style="color:#D22822; font-size: 16px;"></span>
+					<span id="errorMsg3" style="color:#D22822; font-size: 16px;"></span>
+					<span id="errorMsg4" style="color:#D22822; font-size: 16px;"></span>
+
+						<div class="input-wrapper" style="margin-top: 18px;">
+								<input class="input" type="text" name="username" id="username" onchange="validUser()" placeholder="Username">						
+								<span class="focus-input"></span>
+							</div>
+
+						<div class="input-wrapper validate-input">
+								<input class="input" type="password" name="oldpassword" id="oldpassword" onchange="validCurPass()" placeholder="Current Password">
+								<span class="focus-input"></span>
+							</div>
+
+					<div class="input-wrapper validate-input">
+						<input class="input" type="password" name="password1" id="password1" onchange="validPass()" placeholder="New Password">
+						<span class="focus-input"></span>
+					</div>
+
+					<div class="input-wrapper validate-input">
+						<input class="input" type="password" name="password2" id="password2"  onchange="validRPass()" placeholder="Re-type Password">
+						<span class="focus-input"></span>
+                    </div>
+                    
+
+					<div class="container-register-form-btn">
+						<button type="submit" class="register-form-btn">
+							SUBMIT
+						</button>
+					</div>				
+				</form>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div id="dropDownSelect1"></div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>StudentWorks</title>
+	<meta charset="UTF-8">
+	<script>
+		//if (document.location.hostname.search("myproductiondomainname.com") !== -1) {
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-123404482-1');
+        //}
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Roboto|Roboto+Slab|Catamaran" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script>
+	 <script src="login.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="login.css">
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="app">
+				<div class="content-wrapper">
+					<form class="login-form validate-form flex-sb" method="POST" action="/login" name="login" id="login" onsubmit="return validateForm()">
+						<a href="/">
+							<img logo alt="logo" src="../images/logo_graybg.png">
+						</a>
+						<span style="border-bottom: 2px solid #c9c9c9; padding-top: 10px; padding-bottom: 20px; margin-bottom: 15px;" class="title">Sign In</span>
+						{{#if serverMsg}}
+						<div>
+							<span class="txt error" id="serverMsg" style="color:#dfdfdf; font-weight: bold;">{{serverMsg}}</span>
+						</div>
+						{{/if}}
+						<span id="errorMsg" style="color:#D22822; font-size: 16px;"></span>
+						<span id="errorMsg2" style="color:#D22822; font-size: 16px;"></span>
+						<div class="input-wrapper" style="margin-top: 18px;">
+							<input class="input" type="text" name="username1" id="username1" onchange="validUser()" autofocus="autofocus" placeholder="Username"
+							 class="input">
+							</span>
+							<span class="focus-input"></span>
+						</div>
+
+						<div class="input-wrapper">
+							<input class="input" type="password" name="pass" id="pass" onchange="validPass()" placeholder="Password">
+							<span class="focus-input"></span>
+						</div>
+
+						<div>
+							<a href="forgot.html" class="txt3">
+								I forgot my password
+							</a>
+						</div>
+
+						<div class="container-login-form-btn">
+							<button type="submit" onclick="validateForm()" class="login-form-btn">
+								SIGN IN
+							</button>
+						</div>
+						<div style="width: 100%">
+							<a href="/register" class="accTxt">
+								<p style="margin-bottom:-10px;"> Create an account </p>
+							</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

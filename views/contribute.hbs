@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>StudentWorks</title>
+    <script>
+        //if (document.location.hostname.search("myproductiondomainname.com") !== -1) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-123404482-1');
+        //}
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/contribute/contribute.js"></script>
+    <script src="/header/usermenu.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/header/nav.css">
+    <link rel="stylesheet" href="/contribute/contribute.css">
+</head>
+
+<body>
+    {{#if authenticate}}
+    <div hidden id="auth">{{authenticate}}</div>
+    <div hidden id="userID">{{userID}}</div>
+    <div hidden id="userType">{{userType}}</div>
+    {{else}}
+    <div hidden id="userType">Visitor</div>
+    {{/if}}
+    <div class="container">
+        <div class="row hidden-xs">
+            <div class="col-xs-7 col-sm-7">
+                <a href="/">
+                    <img class="swLogo" alt="logo" src="/images/logo.png">
+                </a>
+            </div>
+            <div class="text-right">
+                <p class="swMoto">"By the students, for the students"</p>
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="container">
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav js-nav-add-active-class">
+                            <li class="">
+                                <a href="/" onclick="displayALLProjets()">
+                                    <space class="glyphicon glyphicon-home"></space>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- for main page -->
+                        <ul class="nav navbar-nav js-nav-add-active-class" id="optHeader"></ul>
+                        <!-- for all page to push data into-->
+                        <div id="pageTitleID"></div>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-align-justify profilefIcon" data-toggle="modal" data-target="#myModal"></span>
+                        </a>
+
+                        <!-- USER MENU .....................................................................................-->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document" id="userMenuModal">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel" style="text-align:center;">User menu</h4>
+                                    </div>
+                                    <!-- populated by usermenu.js -->
+                                    <div class="modal-body" id="userMenu"></div>
+                                    <div class="modal-footer"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END of USER MENU.............................................................................-->
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- BODY...................................................................... -->
+    <div class="container">
+        <form id="wForm" name="wForm" method="POST" enctype="multipart/form-data" autocomplete="off">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input hidden="hidden" type="text" id="userIDhtml" name="userID" value={{userID}} />
+                            <label for="title" class="lbl">Title</label>
+                        </td>
+                        <td>
+                            <input autofocus="autofocus" required="required" id="titleInput" type="text" name="title" class="inpt" maxlength="50" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="lngInput" class="lbl">Language</label>
+                        </td>
+                        <td>
+                            <select id="lngList" name="languageChoice">
+                                <option selected value="default">Select one</option>
+                                <option value="C">C</option>
+                                <option value="C++">C++</option>
+                                <option value="Java">Java</option>
+                                <option value="JavaScript">JavaScript</option>
+                                <option value="PHP">PHP</option>
+                                <option value="C#">C#</option>
+                                <option value="Python">Python</option>
+                                <option value="R">R</option>
+                                <option value="Go">Go</option>
+                                <option value="Ruby">Ruby</option>
+                                <option value="Swift">Swift</option>
+                                <option value="Python">MATLAB</option>
+                            </select>
+                            <label class="subLbl">Other</label>
+                            <input id="lngInput" type="text" name="lngInput" class="inpt" class="green-border" maxlength="50" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="frmInput" class="lbl">Framework</label>
+                        </td>
+                        <td>
+                            <select id="frmList" name="frameworkChoice">
+                                <option selected value="default">Select one</option>
+                                <option value="Express.js">Express.js</option>
+                                <option value="Ruby on Rails">Ruby on Rails</option>
+                                <option value="Django">Django</option>
+                                <option value="Unity">Unity</option>
+                                <option value="ASP.NET">ASP.NET</option>
+                                <option value="React">React</option>
+                                <option value="Angular">Angular</option>
+                                <option value="Vue.js">Vue.js</option>
+                                <option value="Vue.js">Spring MVC</option>
+                                <option value="Apache Struts">Apache Struts</option>
+                            </select>
+                            <label class="subLbl">Other</label>
+                            <input id="frmInput" type="text" name="frmInput" class="inpt" maxlength="50" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pltInput" class="lbl">Platform</label>
+                        </td>
+                        <td>
+                            <select id="pltList" name="platformChoice">
+                                <option selected value="default">Select one</option>
+                                <option value="Windows">Windows</option>
+                                <option value="macOS">macOS</option>
+                                <option value="Unix/Linux">Unix/Linux</option>
+                                <option value="Web">Web</option>
+                                <option value="Android">Android</option>
+                                <option value="iOS">iOS</option>
+                                <option value="Raspberry Pi">Raspberry Pi</option>
+                            </select>
+                            <label class="subLbl">Other</label>
+                            <input id="pltInput" type="text" name="pltInput" class="inpt" maxlength="50" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="ctgInput" class="lbl">Category
+                                <span style="font-weight:300;">(optional)</span>
+                            </label>
+                        </td>
+                        <td>
+                            <select id="ctgList">
+                                <option selected value="default">Select one</option>
+                                <option value="Game">Game</option>
+                                <option value="Utility">Utility</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Commerce">Commerce</option>
+                                <option value="Algorithm">Algorithm</option>
+                                <option value="Content Management">Content Management</option>
+                                <option value="Plug-in">Plug-in</option>
+                            </select>
+                            <label class="subLbl">Other</label>
+                            <input id="ctgInput" type="text" name="ctgInput" class="inpt" maxlength="50" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="photo" class="lbl">Icon</label>
+                        </td>
+                        <td>
+                            <input id="photo" type="file" name="photo" accept=".png,jpg,jpeg" required="required" />
+                        </td>
+                    </tr>
+                    <tr class="seperator">
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="devs" class="lbl">Developers
+                                <span style="font-weight:300;">(csv)</span>
+                            </label>
+                        </td>
+                        <td>
+                            <input id="devs" type="text" name="devs" maxlength="50" title="Comma separated list: First name Last name [, First name Last name] ..."
+                                required="required" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="desc" class="lbl">Description</label>
+                        </td>
+                        <td>
+                            <textarea id="desc" name="desc" rows="5" cols="53" maxlength="1000"></textarea>
+                        </td>
+                    </tr>
+                    <tr class="seperator">
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="video" class="lbl">Video upload</label>
+                        </td>
+                        {{#if videoFile}}
+                        <td>
+                            <input id="videoUpload" type="text" name="videoUpload" value="https://myvmlab.senecacollege.ca:6193/{{videoFile}}" disabled/>
+                            <video src="{{videoFile}}" id="videoPlayer" />
+                        </td>
+                        {{else}}
+                        <td>
+                            <input id="video" type="file" name="video" accept=".mp4,.webm,.ogg" required="required" />
+                        </td>
+                        {{/if}}
+
+                    </tr>
+                    <tr class="seperator">
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="recB" class="lbl">Video record</label>
+                        </td>
+                        <td>
+                            <a href="/recording" target="_blank" rel="noopener noreferrer">
+                                <img src="/images/recBtn.png" alt="record" id="recB" name="recB" />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button class="btn btn-primary" type="submit" id="sbmBtn">Submit for Review</button>
+                        </td>
+                    </tr>
+                    <tr class="seperator">
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <div class="row" id="mainBody">
+            <div class='panel panel-default swTile'>
+                <div class='panel-heading' style='text-align: center;'></div>
+                <div class='panel-body'>
+                    <img src='/images/empty.png' id='img' class='img-responsive center-block swPrjImage' alt='icon' />
+                </div>
+                <div class='panel-footer' style='text-align: right;'></div>
+            </div>
+            <div id='colChoice'>
+                <table id="colTable">
+                    <tr id="colRow"></tr>
+                </table>
+            </div>
+            <div><video id='videoPrv' controls hidden='hidden'><srouce src='' type='video/mp4'></video></div>
+        </div>
+    </div>
+    <!-- End of BODY.............................................................. -->
+    <hr class="clearfix w-100 d-md-none pb-3">
+</body>
+
+</html>

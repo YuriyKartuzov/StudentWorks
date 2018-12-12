@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+
+#videoID {
+    border: solid 0.3px black;
+    border-radius: 1px;
+    box-shadow: 4px 5px 14px rgb(145, 145, 145),2px 2px 4px rgb(180, 183, 255);
+}
+
+div.divInl {
+    float: left;
+}
+
+#prjVideo {
+    width:60%;
+    margin-left: 3%;
+    margin-top: 25px;
+}
+
+#videoID {
+    width: 100%;
+}
+
+#prjMetadata, #gitRepo {
+    width: 30%;
+    margin-left:80px;
+}
+
+#desc {
+    width:80%;
+    margin-left:4%;
+}

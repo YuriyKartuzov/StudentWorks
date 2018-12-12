@@ -1,0 +1,113 @@
+/* FORM */
+.lbl {
+    width:170px;
+    font-weight:700;
+    font-size: 18px;
+}
+
+.subLbl {
+    font-weight:400;
+    padding-left: 10px;
+}
+
+form {
+    float: left;
+    padding-left: 80px;
+    padding-top: 0px;
+}
+
+#titleInput, #devs, #roles {
+    width: 364px;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 150px;
+}
+
+td{
+    padding-top: 6px;
+}
+.seperator {
+    height: 40px;
+}
+
+#sbmBtn {
+    font-size: 18px;
+    padding-right: 30px;
+    margin-top:30px;
+}
+
+/* Body */
+#mainBody {
+    width:500px;
+    float: right;
+    padding-left: 30px; 
+    margin-top: -53px;
+       
+}
+
+.swTile {
+    width:400px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    margin-left: 10px;
+    margin-top: -5px;
+    transform:scale(0.65); 
+}
+
+.panel-heading {
+    min-height:65px;
+}
+
+.panel-footer {
+    min-height: 40px;
+    font-size: 0.9em;
+}
+
+.panel-body {
+    height:250px;
+}
+
+.swPrjImage {
+    height: 220px; 
+    margin: auto;
+}
+
+/* Color */
+#colChoice {
+    margin-left: 100px;
+    margin-top: -73px;
+}
+.colTile{
+    width: 20px;
+    height: 23px;
+}
+
+#desc {
+    width:363px;
+}
+
+#colTable {
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+.colBtn{
+    display:block;
+    margin-top:-15px;
+    border-radius: 3px;
+    width:100%;
+    height:100%;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05); 
+
+}
+
+/* VIDEO */
+#videoPrv {
+    width: 550px;
+    transform:scale(0.70); 
+    margin-left:-70px;
+    border-radius: 4px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
