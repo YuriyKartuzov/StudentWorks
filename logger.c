@@ -154,7 +154,8 @@ int integrityCheck()
     return valid;
 }
 
-// Hashing function by Dan J. Bernstein
+// djb2 Algorithm
+// by Dan J. Bernstein
 unsigned long hashCode(char *str)
 {
     unsigned long hash = 5381;
